@@ -1,0 +1,76 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.tabs-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Стили для вкладок */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2c3e50;
+    border-bottom: 2px solid #2980b9;
+}
+
+.tab {
+    flex-grow: 1;
+    padding: 15px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 16px;
+}
+
+.tab:hover {
+    background-color: #2980b9;
+}
+
+.tab.active {
+    background-color: #2980b9;
+}
+
+/* Контент вкладок */
+.tabs-content {
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Дополнительные стили для текста */
+h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+p {
+    color: #7f8c8d;
+}
